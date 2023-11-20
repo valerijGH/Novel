@@ -16,7 +16,7 @@ label start:
     with Dissolve(0.35)
 
     show mother:
-        xalign 0.7 yalign 1.0 zoom 1.1
+        xalign 0.8 yalign 1.0 zoom 1.1
     with Dissolve(0.35)
     
     mother "Антон, мы уже обсуждали твои траты, и мы не можем себе позволить тратить деньги на всякую ерунду."
@@ -34,7 +34,7 @@ label start:
     with Dissolve(0.35)
 
     show mother:
-        xalign 0.7 yalign 1.0 zoom 0.95
+        xalign 0.8 yalign 1.0 zoom 1.0
     with Dissolve(0.35)
 
     anton "Я знаю мааам, я стараюсь быть ответственным, но иногда же можно исключение сделать. Не каждый день можно пойти на концерт своей любимой исполнительницы."
@@ -44,7 +44,7 @@ label start:
     with Dissolve(0.35)
 
     show mother:
-        xalign 0.7 yalign 1.0 zoom 1.1
+        xalign 0.8 yalign 1.0 zoom 1.1
     with Dissolve(0.35)
 
     mother "Тоша, мы с отцом ценим твою работу, но мы хотим, чтобы ты научился управлять своими финансами."
@@ -54,7 +54,7 @@ label start:
     with Dissolve(0.35)
 
     show mother:
-        xalign 0.7 yalign 1.0 zoom 0.95
+        xalign 0.8 yalign 1.0 zoom 1.0
     with Dissolve(0.35)
 
     anton "Океей мам."
