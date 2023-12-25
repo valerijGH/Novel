@@ -1,9 +1,4 @@
-﻿define anton = Character('Антон', color="#5255ff")
-define mother = Character('Мать', color="#c8ffc8")
-define timoha = Character('Тимоха', color="#ff0000")
-define father = Character('Отец', color="#00ffea")
-
-label start:
+﻿label start:
     scene bg room shadow
     
     show anton:
@@ -157,3 +152,5 @@ label kitchen:
             - Ну так яйца-то были..."
 
     anton "Кхм кх кх ну типа"
+
+    jump messengerWithEducation
