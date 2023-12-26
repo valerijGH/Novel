@@ -25,8 +25,10 @@ label messengerWithEducation:
 
     anton "Ой, точно. Я как-то об этом забыл. Спасибо, что напомнил. Буду дорабатывать."
 
+    jump messengerWithCustomer
+
 label messengerAboutDeception:
-    scene messenger
+    scene messenger with fade
 
     show anton:
         xalign 0.1 yalign 1.0
