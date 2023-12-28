@@ -88,6 +88,8 @@ label computer:
 
     anton "Оп-па, тестик"
 
+    jump educationTest
+
 label messenger:
     scene messenger
 
