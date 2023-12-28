@@ -25,8 +25,6 @@ label messengerWithEducation:
 
     anton "Ой, точно. Я как-то об этом забыл. Спасибо, что напомнил. Буду дорабатывать."
 
-    jump messengerWithCustomer
-
 label messengerAboutDeception:
     scene messenger with fade
 
