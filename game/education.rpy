@@ -54,7 +54,7 @@ label messengerAboutDeception:
 
     anton "На самом деле я почувствовал, в Тильде адаптивность к разным экранам аховая, харкоженные позиции просто режут без ножа, уверен через рукописный CSS это делается полегче. Да и хочется себя уже настоящим кодером почувствовать."
 
-    return
+    jump truck
 
 label educationTest:
     scene computer_with_yandex_results
