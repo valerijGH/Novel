@@ -1,20 +1,17 @@
 ﻿label start:
     scene bg room shadow
-    
+
+    play music "main theme.mp3"
+
     show anton:
-        xalign 0.2 yalign 1.0 zoom 1.1
+        xalign 0.2 yalign 1.0
 
     anton "Привет, мам. Я вчера подумал, очень бы хотелось посетить концерт Дроы. Ну знаешь, в каждом утюге сейчас поет."
 
     anton "Она выступает в июле, билетов уже почти не осталось. Можешь помочь с деньгами на билет?"
 
-    show anton:
-        xalign 0.2 yalign 1.0 zoom 1.0
-    with Dissolve(0.35)
-
     show mother:
-        xalign 0.8 yalign 1.0 zoom 1.1
-    with Dissolve(0.35)
+        xalign 0.8 yalign 1.0
     
     mother "Антон, мы уже обсуждали твои траты, и мы не можем себе позволить тратить деньги на всякую ерунду."
 
@@ -26,72 +23,37 @@
 
     mother "Ты должен быть более ответственным в управлении своим бюджетом."
 
-    show anton:
-        xalign 0.2 yalign 1.0 zoom 1.1
-    with Dissolve(0.35)
-
-    show mother:
-        xalign 0.8 yalign 1.0 zoom 1.0
-    with Dissolve(0.35)
-
     anton "Я знаю мааам, я стараюсь быть ответственным, но иногда же можно исключение сделать. Не каждый день можно пойти на концерт своей любимой исполнительницы."
-    
-    show anton:
-        xalign 0.2 yalign 1.0 zoom 1.0
-    with Dissolve(0.35)
-
-    show mother:
-        xalign 0.8 yalign 1.0 zoom 1.1
-    with Dissolve(0.35)
 
     mother "Тоша, мы с отцом ценим твою работу, но мы хотим, чтобы ты научился управлять своими финансами."
 
-    show anton:
-        xalign 0.2 yalign 1.0 zoom 1.1
-    with Dissolve(0.35)
-
-    show mother:
-        xalign 0.8 yalign 1.0 zoom 1.0
-    with Dissolve(0.35)
-
     anton "Океей мам."
 
-    scene bg room shadow
-
-    "Осталось 70 дней до концерта"
-
 label computer:
-    scene computer
-
-    anton "Ыфыыыф"
-
-    scene computer_with_fist
-    with vpunch
-
-    pause 1.0
-
-    scene computer
-
-    anton "И все-таки."
-
-    anton "Нет, это бред. Рынок перенасыщен, кому я такой красивый нужен без опыта - хах - да никому!"
-
-    anton "Мда, но с чего-то все же нужно начинать."
-
     scene computer_with_yandex_search
+
+    anton "Мда, с чего-то все же нужно начинать."
 
     anton "Так, Ок Яндекс, \"как вка-тить-ся в ай-ти\". Эээ. По-другому. \"какая професс-сия по-дой-дет но-вич-ку для вхо-да в ай-ти вопрос\"."
 
     scene computer_with_yandex_results
 
-    anton "Угу, так учить языки зочется не особо, французского хватает, биг дата, юнит тесты агааа...."
-
-    anton "Оп-па, тестик"
+    anton "Угу, так учить языки хочется не особо, французского хватает, биг дата, юнит тесты агааа...."
 
     jump educationTest
 
 label messenger:
+    scene black
+
+    show time skip at truecenter with fade
+
+    pause 1.0
+
     scene messenger
+
+    stop music
+
+    play music "timoha theme.mp3"
 
     show anton:
         xalign 0.1 yalign 1.0
@@ -121,9 +83,9 @@ label messenger:
 
     timoha "как с чего? фрилансер? так составляй резюме! а, и раз все-таки веб, то почитай про конструкторы сайтов, скину статейки с хабра."
 
-    scene messenger
+    stop music
 
-    "Осталось 68 дней до концерта"
+    play music "main theme.mp3"
 
 label kitchen:
     scene kitchen
@@ -137,7 +99,7 @@ label kitchen:
     show mother:
         xalign 0.7 yalign 1.0 zoom 0.9
 
-    anton "Привет, родители. Я подумал, и может быть, я найду способ заработать деньги самостоятельно. Возможно, попробую веб-разработку."
+    anton "Привет, родители. Я подумал, и может быть, я нашел способ заработать деньги самостоятельно. Попробую веб-разработку."
 
     mother "Здорово, Антон! Это отличная идея. А что конкретно ты собираешься делать?"
 
@@ -162,5 +124,26 @@ label kitchen:
             - Ну так яйца-то были..."
 
     anton "Кхм кх кх ну типа"
+
+label antonWithTilda:
+    scene computer_with_yandex_search
+
+    anton "Так, Тильда-тильда три та та, Не так уж и сложно, как кажется. Давай попробуем создать сайт для заметок что-ли."
+
+    stop music
+
+    play music "first site.mp3"
+
+    "*запускает редактор, начинает*"
+
+    scene black
+
+    show tilda time skip at truecenter with fade
+
+    pause 3.0
+
+    scene computer worst site
+
+    anton "Первый лендинг готов!"
 
     jump messengerWithEducation
