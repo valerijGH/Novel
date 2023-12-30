@@ -1,30 +1,9 @@
 define isContinueConversation = True
 
-label truck:
-    scene anton from house
-
-    pause
-
-    scene anton on the crossing
-
-    pause
-
-    scene truck
-
-    pause
-
-    scene truck closer
-
-    pause
-
-    scene black
-
-    pause
-
-    anton "Фух, чуть не сбил, что за день… надо быть осторожнее."
-
 label store:
     scene anton come
+
+    play music "leave home.mp3"
     
     pause
 
@@ -44,20 +23,23 @@ label store:
 
     anya "Действительно? Поделишься?"
 
-    anton "Я только что закончил крупный заказ, заработал довольно кругленькую сумму. И теперь я собираюсь потратить ее на поход на концерт и поездку в Питер."
-
-    anya "О, это звучит потрясающе! Такое заслуживает отмечания. Я Аня, кстати."
-
     menu:
-        "Антон. Приятно познакомиться. Этот день стал еще лучше благодаря такой приятной встрече.":
+        "Конечно":
             jump continueConversationWithAnya
 
-        "Угу, ну, я пойду.":
+        "Да там довольно длинная история, думаю в другой раз.":
             $ isContinueConversation = False
+            anya "Ну, в другой раз, так в другой раз"
+            anton "Чтож, увидимся!"
+            anya "Ага, до встречи"
             jump antonHomeAlone
     
 label antonHomeAlone:
-    scene bg room shadow
+    scene black
+
+    pause 1.5
+
+    scene dirty room
 
     show anton:
         xalign 0.1 yalign 1.0
@@ -72,12 +54,14 @@ label moonInTheWindow:
     scene black
 
     if isContinueConversation:
+        "*уведомление в мессенджере*"
         anya "Я в деле!"
         scene moon
+        "Антон открывает окно и смотрит на улицу, где светит луна"
         anton "Питер, концерт, новые знакомства... все это ждет меня. Жизнь прекрасна, и ни одна усталость не сравнится с тем, что я получу от этих моментов."
-
     else:
         scene moon
+        "Антон открывает окно и смотрит на улицу, где светит луна"
         anton "Питер, концерт... все это ждет меня. Жизнь прекрасна, и ни одна усталость не сравнится с тем, что я получу от этих моментов."
     
     return
@@ -90,6 +74,10 @@ label continueConversationWithAnya:
 
     show anya:
         xalign 0.95 yalign 1.0
+
+    anton "Я только что закончил крупный заказ, заработал довольно кругленькую сумму. И теперь я собираюсь потратить ее на поход на концерт и поездку в Питер."
+
+    anya "О, это звучит потрясающе! Такое заслуживает отмечания. Я Аня, кстати."
 
     anton "И ты знаешь, после этого заказа я решил, что пора мне взять отпуск. Я собираюсь отправиться в Питер, посетить концерт и, наконец-то, просто насладиться отдыхом."
 

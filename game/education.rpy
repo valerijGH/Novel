@@ -1,7 +1,12 @@
 define answers = 0
+define tasks = [True, True, True]
 
 label messengerWithEducation:
-    scene messenger
+    scene messenger worst site
+
+    stop music
+
+    play music "timoha theme.mp3"
 
     show anton:
         xalign 0.1 yalign 1.0
@@ -15,53 +20,29 @@ label messengerWithEducation:
 
     timoha "кидай, посмотрим что наваял твой преступный ум"
 
-    pause 1.0
+    pause 2.0
 
     timoha "чувваак ну что тебе сказать... накостылил ты знатно. из первого, что в глаза бросается - почему при создании сайта ты решил использовать такой неудачный шрифт?"
 
-    timoha "Серьезно, это как будто кричит \"90-е вернулись\". и цветовая гамма не очень сочетается, подумай об этом."
+    timoha "серьезно, это как будто кричит \"90-е вернулись\". и цветовая гамма не очень сочетается, подумай об этом."
 
     anton "Оу, спасибо за обратную связь. Ты прав, не подумал про шрифт, и цвета, кажется, действительно не самый лучший выбор. Буду править."
 
-    timoha "ю аре велком, бразер. все мы тут были и ошибки городили. главное, исправлять и учиться на них. а, еще, у тебя кажется тут нет адаптивной версии для мобильных устройств. в наше время это критично."
+    timoha "ю аре велком, бразер. все мы тут были и ошибки городили. главное, исправлять и учиться на них. а, еще, у тебя тут кривая верстка на мобильных устройствах. в наше время это критично."
 
     anton "Ой, точно. Я как-то об этом забыл. Спасибо, что напомнил. Буду дорабатывать."
 
-label messengerAboutDeception:
-    scene messenger with fade
+    stop music
 
-    show anton:
-        xalign 0.1 yalign 1.0
-    
-    show timoha:
-        xalign 0.95 yalign 1.0
+    play music "main theme.mp3"
 
-    timoha "АХАХАХАХАХАХАХАХАХ"
-
-    anton "Да погоди ты, я один раз всего "
-
-    timoha "АХАХАХАХАХ БЕЗ ГАРАНТА ПЕРВЫЙ ЖЕ ЗАКАЗ АХА"
-
-    anton "Все так…"
-
-    timoha "ну ты и кадр, они ж твой проект в тот же день кому-то на доработку подсунули, если не сами допилили."
-
-    anton "Черт, я и не подумал об этом. Буду знать на будущее."
-
-    timoha "бро, ты не просто так научился. еще не надумал стать фулстек прогером? знаешь, ты был бы более независим."
-
-    anton "Что-то типа фулстековерфлоу?"
-
-    timoha "ха, но нет, эт когда ты можешь делать всё - и дизайн, и программирование. намного удобнее, чем быть привязанным только к конструкторам."
-
-    anton "На самом деле я почувствовал, в Тильде адаптивность к разным экранам аховая, харкоженные позиции просто режут без ножа, уверен через рукописный CSS это делается полегче. Да и хочется себя уже настоящим кодером почувствовать."
-
-    jump truck
+    jump antonEndWithTilda
 
 label educationTest:
     scene computer_with_yandex_results
 
     menu:
+        anton "Оп-па, тестик"
         "Пройду-ка пожалуй":
             jump test
 
@@ -135,3 +116,94 @@ label test:
     anton "Ну и муть, а не тест, конечно"
 
     jump messenger
+
+label antonEndWithTilda:
+    scene computer better site
+
+    anton "Так, шрифты поменял, цвета подкорректировал. Осталось подправить Адаптив. Посмотрим, как с этим справлюсь."
+
+    "*запускает редактор, начинает работу*"
+
+    scene black 
+
+    show tilda time skip at truecenter with fade
+
+    pause 3.0
+
+    scene computer better site
+
+    anton "Так, ну теперь я немного освоился в тильде и могу попробовать поделать заказы на бирже фриланса."
+
+    stop music
+
+    play music "tasks.mp3"
+
+label antonMakingTasks:
+    scene bg tasks
+
+    menu:
+        anton "Посмотрим, что тут у нас есть..."
+
+        "Изменить положение элементов на сайте. Подправить верстку (1000 руб.)" if tasks[0]:
+            jump firstTask
+
+        "Добавить анимацию к заголовку на главной странице. Изменить цветовую гамму в соответствии с логотипом. (500 руб.)" if tasks[1]:
+            jump secondTask
+        
+        "Встроить виджет активности пользователей на страницу. (2000 руб.)" if tasks[2]:
+            jump thirdTask
+    
+    scene black
+
+    show order time skip at truecenter with fade
+
+    pause 2.0
+
+    jump createProfile
+
+label firstTask:
+    anton "Хм, звучит просто. Возьмусь пожалуй"
+
+    scene black
+
+    "Спустя полтора часа"
+
+    scene bg tasks
+
+    anton "Хоть и выглядело просто, но почему то заняло много времени.."
+
+    anton "Ну, главное заказчик остался доволен."
+
+    $ tasks[0] = False
+
+    jump antonMakingTasks
+
+label secondTask:
+    anton "Агаа, ну это не сложно."
+
+    scene black
+
+    "Спустя 3 часа"
+
+    scene bg tasks
+
+    anton "И сделано.."
+
+    $ tasks[1] = False
+
+    jump antonMakingTasks
+
+label thirdTask:
+    anton "Придется помаятся..."
+
+    scene black 
+    
+    "Спустя 5 часов"
+
+    scene bg tasks
+
+    anton "Весь интернет прошерстил но сделал."
+
+    $ tasks[2] = False
+    
+    jump antonMakingTasks
