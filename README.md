@@ -6,6 +6,8 @@
 
 [Релизы](https://github.com/valerijGH/Novel/releases)
 
+[Последний релиз](https://github.com/valerijGH/Novel/releases/tag/v1.3)
+
 #### Аналитика:
 
 https://docs.google.com/document/d/1e0QRLriM8d7bg3CUoWHaDwwYlGr0Q0Mrf3fZiH5x2YY/edit?usp=sharing
