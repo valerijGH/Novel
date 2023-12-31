@@ -12,6 +12,10 @@
 
 https://docs.google.com/document/d/1e0QRLriM8d7bg3CUoWHaDwwYlGr0Q0Mrf3fZiH5x2YY/edit?usp=sharing
 
+### Дизайн:
+
+https://drive.google.com/drive/folders/1PYWk0yCh5aqkqFPuQefv6eygzJaKg6_8
+
 #### Канбан доска:
 
 https://github.com/users/valerijGH/projects/1
